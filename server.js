@@ -49,29 +49,29 @@ app.get("/games/:id", function(req, res){
 });    
 
 
-
+//update
 app.put("/games/:id", function(req,res) {
     db.game.update({
-        name: req.body.name,
-        description: req.body.description,
-        players: req.body.players
-    }, {
+            name: req.body.name,
+            description: req.body.description,
+            players: req.body.players
+    },  {
         where: {
             id: req.params.id
-        }
+    }
         }).then(function(game) {
         res.redirect("/games/");
         });
     });
     
-
+//edit
 app.get("/games/:id/edit", function(req,res) {
     db.game.findById(parseInt(req.params.id)).then(function(game) {
         res.render("games/edit", {game});
     });
 });
 
-
+//delete 
 app.delete("/games/:id", function(req,res){
     db.game.destroy({
         where:{
@@ -83,23 +83,5 @@ app.delete("/games/:id", function(req,res){
 }); 
 
 
-
-// app.delete("/games/:id", function(req,res) {
-//     db.game.destroy({
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then(function(game) {
-//         res.redirect("/games");
-//     });
-// });
-
-
-
-// // Delete
-// app.post("/games/delete:id", function(req, res){
-//  // db.game.destroy(games.id).then(function(game){
-//     //game.splice(parseInt(req.params.games.id), 1); 
-//     //res.redirect("/games"); 
 
 app.listen(3000); 
