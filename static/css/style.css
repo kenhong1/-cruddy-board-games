@@ -26,6 +26,13 @@ form{
 p{
     text-align: center; 
     position: relative;
+}
 
+#index{
+    line-height: 5em; 
+    position: relative;
+    color: white;
+    font-size: 20px;
+    
 }
 
