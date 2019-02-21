@@ -1,16 +1,31 @@
 body ,html{
     margin: 0;
     padding: 0; 
+    text-align: center;
 
 }
 
 body{
-    color:black; 
-    font-family: 'Bad Script', cursive;
+    color:white; 
     text-align: center; 
-
+    font-family: 'Unica One', cursive;
+    background-color: #AF4319; 
 
 }
 form{
     display: inline-block; 
 }
+
+#welcome{
+    position: relative;
+    font-size: 100px; 
+    text-align: center; 
+    margin: 0 auto; 
+}
+
+p{
+    text-align: center; 
+    position: relative;
+
+}
+
